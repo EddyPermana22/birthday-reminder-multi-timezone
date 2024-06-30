@@ -1,0 +1,7 @@
+{
+  "name": "birthday-reminder-multi-timezone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EddyPermana22/birthday-reminder-multi-timezone.git",
+  "license": "MIT"
+}
