@@ -3,5 +3,41 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/EddyPermana22/birthday-reminder-multi-timezone.git",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start-api-server": "ts-node index.ts",
+    "start-scheduler": "ts-node src/schedulers/birthday/birthdayNotificationScheduler.ts",
+    "start-worker": "ts-node src/schedulers/birthday/birthdayNotificationWorker.ts",
+    "start-queue-dashboard": "ts-node src/schedulers/queueDashboard.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bull": "^4.10.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/ioredis": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.14.9",
+    "@types/node-cron": "^3.0.11",
+    "@types/uuid": "^10.0.0",
+    "@types/yup": "^0.32.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@bull-board/express": "^5.20.5",
+    "axios": "^1.7.2",
+    "bull": "^4.15.0",
+    "city-timezones": "^1.2.1",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "node-cron": "^3.0.3",
+    "uuid": "^10.0.0",
+    "yup": "^1.4.0"
+  }
 }
